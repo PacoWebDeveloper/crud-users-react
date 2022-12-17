@@ -1,0 +1,125 @@
+.material-symbols-outlined {
+    font-variation-settings:
+    'FILL' 1,
+    'wght' 400,
+    'GRAD' 0,
+    'opsz' 48
+  }
+.App {
+  min-width: 350px;
+  min-height: 100%;
+  background-image: radial-gradient(circle at 87.5% 12.5%, #ff7d53 0, #ff664e 25%, #f94646 50%, #ea1740 75%, #dd0040 100%);
+}
+.App > h1 {
+  text-align: center;
+  font-size: 3rem;
+}
+form {
+  max-width: 700px;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 2rem;
+}
+.input-container {
+  display: flex;
+  gap: 1rem;
+}
+.input {
+  width: 100%;
+  height: 2rem;
+  border-radius: 0.5rem;
+  border: none;
+  box-shadow: inset 0 0 3px #000;
+  font-size: 1.5rem;
+  padding: 0.5rem;
+  outline: none;
+}
+.little {
+  width: calc(100% - 1rem);
+}
+.input:focus {
+  outline: 2px solid #dd0040;
+}
+@keyframes pulse {
+  0% {
+    box-shadow: none;
+  }
+  25% {
+    box-shadow: 0 0 5px #ccc;
+  }
+  50% {
+    box-shadow: 0 0 10px #ccc;
+  }
+  75% {
+    box-shadow: 0 0 5px #ccc;
+  }
+  100% {
+    box-shadow: none;
+  }
+}
+form > button {
+  height: 2rem;
+  border-radius: 0.5rem;
+  border: none;
+  background-color: #ff7d53;
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-top: 1rem;
+  animation: pulse 2s infinite;
+}
+form > button:active {
+  background-color: #ff664e;
+  box-shadow: inset 0 0 5px #dd0040;
+}
+.users-list {
+  padding: 2rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+.user-card {
+  width: 90%;
+  height: 150px;
+  padding: 1rem 2rem;
+  border-radius: 8px;
+  border: none;
+  box-shadow: 0 0 20px #333;
+  background-color: #fff;
+}
+.user-card > ul {
+  list-style: none;
+}
+.options {
+  display: flex;
+  justify-content: end;
+  gap: 1rem;
+  padding-top: 1rem;
+}
+.option-btn {
+  border-radius: 50%;
+  transition: 100ms box-shadow;
+}
+.option-btn:first-child:active {
+  box-shadow: 0 0 5px #dd0040;
+}
+.option-btn:first-child {
+  color: #dd0040;
+}
+.option-btn:last-child:active {
+  box-shadow: 0 0 5px #dd0040;
+}
+.option-btn:last-child {
+  color: #ff7d53;
+}
+@media (min-width: 700px) {
+  form {
+    margin: 0 auto;
+  }
+}
+@media (min-width: 1100px) {
+  .user-card {
+    max-width: 1000px;
+  }
+}
